@@ -30,7 +30,7 @@ jobs:
       - name: ⤵️ Check out code from GitHub
         uses: actions/checkout@v2
       - name: 🚀 Run yamllint
-        uses: frenck/action-yamllint@master
+        uses: frenck/action-yamllint@main
 ```
 
 ## Arguments
@@ -56,7 +56,7 @@ to you specify a custom configuration file location.
 
 ```yaml
 - name: 🚀 Run yamllint
-  uses: frenck/action-yamllint@master
+  uses: frenck/action-yamllint@main
   with:
     config: "./custom/.yamllint"
 ```
@@ -68,7 +68,7 @@ This example runs yamllint only on the YAML files located in the `src` folder.
 
 ```yaml
 - name: 🚀 Run yamllint
-  uses: frenck/action-yamllint@master
+  uses: frenck/action-yamllint@main
   with:
     config: "src/"
 ```
@@ -80,7 +80,7 @@ the action to raise an failure, even when only warnings are found.
 
 ```yaml
 - name: 🚀 Run yamllint
-  uses: frenck/action-yamllint@master
+  uses: frenck/action-yamllint@main
   with:
     strict: true
 ```
@@ -93,7 +93,7 @@ of warnings using the `warnings` argument.
 
 ```yaml
 - name: 🚀 Run yamllint
-  uses: frenck/action-yamllint@master
+  uses: frenck/action-yamllint@main
   with:
     warnings: false
 ```
