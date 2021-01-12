@@ -1,4 +1,4 @@
-# Frenck's Github Action: yamllint
+# 🚀 Frenck's Github Action: yamllint
 
 [![GitHub Release][releases-shield]][releases]
 ![Project Stage][project-stage-shield]
@@ -158,7 +158,7 @@ SOFTWARE.
 [github-sponsors]: https://github.com/sponsors/frenck
 [license-shield]: https://img.shields.io/github/license/frenck/python-wled.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2021.svg
-[project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
+[project-stage-shield]: https://img.shields.io/badge/project%20stage-production%20ready-brightgreen.svg
 [releases-shield]: https://img.shields.io/github/release/frenck/action-yamllint.svg
 [releases]: https://github.com/frenck/action-yamllint/releases
 [semver]: http://semver.org/spec/v2.0.0.html
