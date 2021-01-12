@@ -14,7 +14,7 @@
 A very simple and easy to use GitHub Action for linting YAML files using
 [yamllint][yamllint].
 
-It annotates found issues, support strict mode, can also fail on warnings if
+It annotates found issues, supports strict mode, can also fail on warnings if
 wanted, and can be fully tuned using a yamllint configuration file.
 
 ## Usage
