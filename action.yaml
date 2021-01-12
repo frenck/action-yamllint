@@ -1,0 +1,30 @@
+---
+name: "Frenck's yamllint"
+description: 🚀 Frenck's GitHub Action for yamllint. A linter for YAML files.
+author: frenck
+
+branding:
+  color: purple
+  icon: check
+
+inputs:
+  config:
+    description: Path to custom configuration file (non-default YAMLLint path)
+    default: ""
+    required: false
+  path:
+    description: Files (or directory) to check
+    default: "."
+    required: false
+  strict:
+    description: Strict mode, causes linter warnings to be handled as errors
+    default: "false"
+    required: false
+  warnings:
+    description: Allows for disabling warnings from (annotation) output
+    default: "true"
+    required: false
+
+runs:
+  using: "docker"
+  image: "src/Dockerfile"
