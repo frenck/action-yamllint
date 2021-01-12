@@ -30,7 +30,7 @@ jobs:
       - name: ⤵️ Check out code from GitHub
         uses: actions/checkout@v2
       - name: 🚀 Run yamllint
-        uses: frenck/action-yamllint@main
+        uses: frenck/action-yamllint@v1
 ```
 
 ## Arguments
@@ -68,7 +68,7 @@ This example runs yamllint only on the YAML files located in the `src` folder.
 
 ```yaml
 - name: 🚀 Run yamllint
-  uses: frenck/action-yamllint@main
+  uses: frenck/action-yamllint@v1
   with:
     config: "src/"
 ```
@@ -80,7 +80,7 @@ the action to raise an failure, even when only warnings are found.
 
 ```yaml
 - name: 🚀 Run yamllint
-  uses: frenck/action-yamllint@main
+  uses: frenck/action-yamllint@v1
   with:
     strict: true
 ```
@@ -93,10 +93,45 @@ of warnings using the `warnings` argument.
 
 ```yaml
 - name: 🚀 Run yamllint
-  uses: frenck/action-yamllint@main
+  uses: frenck/action-yamllint@v1
   with:
     warnings: false
 ```
+
+## Alternative
+
+The funny part is, you don't need an GitHub Action specifically for yamllint.
+yamllint is by default available on the GitHub's Action runners.
+
+So you can do this alternatively:
+
+```yaml
+name: Lint
+on: [push, pull_request]
+jobs:
+  build:
+    name: ✅ yamllint
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⤵️ Check out code from GitHub
+        uses: actions/checkout@v2
+      - name: 🚀 Run yamllint
+        run: |
+          yamllint .
+```
+
+And... The above example, is faster, as it doesn't have a startup time, making
+it around 5-10 seconds faster.
+
+So, why this action?!
+
+The action is version controlled and can be updated independently from GitHub's
+runners. It prevents surprises, and using dependabot, you can actually know
+when an upgrade happens.
+
+Which version runs on the GitHub runner? And tomorrow?
+
+Nevertheless, it is good to know the alternatives 😉
 
 ## Changelog & Releases
 
