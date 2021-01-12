@@ -98,6 +98,41 @@ of warnings using the `warnings` argument.
     warnings: false
 ```
 
+## Alternative
+
+The funny part is, you don't need an GitHub Action specifically for yamllint.
+yamllint is by default available on the GitHub's Action runners.
+
+So you can do this alternatively:
+
+```yaml
+name: Lint
+on: [push, pull_request]
+jobs:
+  build:
+    name: ✅ yamllint
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⤵️ Check out code from GitHub
+        uses: actions/checkout@v2
+      - name: 🚀 Run yamllint
+        run: |
+          yamllint .
+```
+
+And... The above example, is faster, as it doesn't have a startup time, making
+it around 5-10 seconds faster.
+
+So, why this action?!
+
+The action is version controlled and can be updated independently from GitHub's
+runners. It prevents surprises, and using dependabot, you can actually know
+when an upgrade happens.
+
+Which version runs on the GitHub runner? And tomorrow?
+
+Nevertheless, it is good to know the alternatives 😉
+
 ## Changelog & Releases
 
 This repository keeps a change log using [GitHub's releases][releases]
