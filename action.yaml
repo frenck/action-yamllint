@@ -4,8 +4,8 @@ description: 🚀 Frenck's GitHub Action for yamllint. A linter for YAML files.
 author: frenck
 
 branding:
-  color: purple
-  icon: check
+  color: red
+  icon: thumbs-up
 
 inputs:
   config:
