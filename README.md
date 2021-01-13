@@ -23,8 +23,8 @@ wanted, and can be fully tuned using a yamllint configuration file.
 name: Lint
 on: [push, pull_request]
 jobs:
-  build:
-    name: ✅ yamllint
+  yamllint:
+    name: yamllint
     runs-on: ubuntu-latest
     steps:
       - name: ⤵️ Check out code from GitHub
@@ -56,7 +56,7 @@ to you specify a custom configuration file location.
 
 ```yaml
 - name: 🚀 Run yamllint
-  uses: frenck/action-yamllint@main
+  uses: frenck/action-yamllint@v1
   with:
     config: "./custom/.yamllint"
 ```
@@ -110,7 +110,7 @@ name: Lint
 on: [push, pull_request]
 jobs:
   build:
-    name: ✅ yamllint
+    name: yamllint
     runs-on: ubuntu-latest
     steps:
       - name: ⤵️ Check out code from GitHub
@@ -132,6 +132,16 @@ when an upgrade happens.
 Which version runs on the GitHub runner? And tomorrow?
 
 Nevertheless, it is good to know the alternatives 😉
+
+## Real-world examples
+
+The following repositories are using this GitHub Action, and thus provide
+you with some real-world uses of this GitHub Action.
+
+- [Frenck's Home Assistant Configuration](https://github.com/frenck/home-assistant-config)
+
+Are you using this GitHub Action? Feel free to open up a PR to add your
+configuration to this list 😍
 
 ## Changelog & Releases
 
