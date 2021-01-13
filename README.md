@@ -35,12 +35,12 @@ jobs:
 
 ## Arguments
 
-| Input  | Description | Usage |
-| :---:     |     :---:   |    :---:   |
-| `config`  | Path to custom configuration file (non-default YAMLLint path). | _Optional_ |
-| `path`  | Files (or directory) to check. | _Optional_ |
-| `strict`  | Strict mode, causes linter warnings to be handled as errors. | _Optional_ |
-| `warnings`  | Allows for disabling warnings from (annotation) output. | _Optional_ |
+|   Input    |                          Description                           |   Usage    |
+| :--------: | :------------------------------------------------------------: | :--------: |
+|  `config`  | Path to custom configuration file (non-default YAMLLint path). | _Optional_ |
+|   `path`   |                 Files (or directory) to check.                 | _Optional_ |
+|  `strict`  |  Strict mode, causes linter warnings to be handled as errors.  | _Optional_ |
+| `warnings` |    Allows for disabling warnings from (annotation) output.     | _Optional_ |
 
 ## Examples
 
@@ -206,12 +206,12 @@ This repository keeps a change log using [GitHub's releases][releases]
 functionality.
 
 Releases are based on [Semantic Versioning][semver], and use the format
-of ``MAJOR.MINOR.PATCH``. In a nutshell, the version will be incremented
+of `MAJOR.MINOR.PATCH`. In a nutshell, the version will be incremented
 based on the following:
 
-- ``MAJOR``: Incompatible or major changes.
-- ``MINOR``: Backwards-compatible new features and enhancements.
-- ``PATCH``: Backwards-compatible bugfixes and package updates.
+- `MAJOR`: Incompatible or major changes.
+- `MINOR`: Backwards-compatible new features and enhancements.
+- `PATCH`: Backwards-compatible bugfixes and package updates.
 
 ## Contributing
 
