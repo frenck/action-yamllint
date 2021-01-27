@@ -139,6 +139,7 @@ The following repositories are using this GitHub Action, and thus provide
 you with some real-world uses of this GitHub Action.
 
 - [Frenck's Home Assistant Configuration](https://github.com/frenck/home-assistant-config)
+- [Metbril's :sunglasses: Home Assistant Configuration](https://github.com/metbril/home-assistant-config)
 
 Are you using this GitHub Action? Feel free to open up a PR to add your
 configuration to this list 😍
