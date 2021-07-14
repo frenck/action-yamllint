@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
 declare -a options
 
-# This is a GitHub Action... Act like it :)
-options+=(--format github)
+# Use standard formatting, the GitHub Action annotation is nice, but
+# hides information from the logs. This action uses standard output
+# with a problem matcher instead.
+options+=(--format standard)
+
+# Register problem matcher
+cp /matcher.json "${PWD}/matcher.json"
+echo "::add-matcher::matcher.json"
 
 # Custom path for yamllint configuration input
 if [[ -n "${INPUT_CONFIG}" ]]; then
