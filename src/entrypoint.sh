@@ -6,6 +6,8 @@ declare -a options
 # with a problem matcher instead.
 options+=(--format standard)
 
+ls -laR
+
 # Register problem matcher
 cp /matcher.json "${PWD}/matcher.json"
 echo "::add-matcher::matcher.json"
