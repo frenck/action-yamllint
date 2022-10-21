@@ -6,19 +6,19 @@ declare -a options
 # with a problem matcher instead.
 options+=(--format standard)
 
-ls -laR
-
 # Register problem matcher
 cp /matcher.json "${PWD}/matcher.json"
 echo "::add-matcher::matcher.json"
 
 # Custom path for yamllint configuration input
 if [[ -n "${INPUT_CONFIG}" ]]; then
+  # https://stackoverflow.com/a/10204713
   if [[ -f "${INPUT_CONFIG}" ]]; then
+    options+=(--config-file "${INPUT_CONFIG}")
+  else
     echo "::error ::Custom yamllint configuration file not found: ${INPUT_CONFIG}"
     exit 1
   fi
-  options+=(--config-file "${INPUT_CONFIG}")
 fi
 
 [[ "${INPUT_STRICT,,}" = "true" ]] \
