@@ -31,4 +31,4 @@ fi
 yamllint --version
 
 # Lint!
-exec "yamllint ${options[@]} ${INPUT_PATH:-.}"
+yamllint "${options[@]}" ${INPUT_PATH:-.}
