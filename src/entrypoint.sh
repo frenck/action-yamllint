@@ -12,7 +12,7 @@ echo "::add-matcher::matcher.json"
 
 # Custom path for yamllint configuration input
 if [[ -n "${INPUT_CONFIG}" ]]; then
-  if [[ -f "${INPUT_CONFIG}" ]]; then
+  if [[ ! -f "${INPUT_CONFIG}" ]]; then
     echo "::error ::Custom yamllint configuration file not found: ${INPUT_CONFIG}"
     exit 1
   fi
