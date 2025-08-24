@@ -70,7 +70,7 @@ This example runs yamllint only on the YAML files located in the `src` folder.
 - name: 🚀 Run yamllint
   uses: frenck/action-yamllint@v1
   with:
-    config: "src/"
+    path: "src/"
 ```
 
 ### Running yamllint in strict mode
